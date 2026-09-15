@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            margin-top: 200px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #balloon.pop {
+            transform: scale(1.3);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="balloon" onclick="addSize()"></div>
+    </div>
+
+    <script>
+
+        // ขนาดเริ่มต้น
+        let size = 200;
+
+        // ขนาดสูงสุดก่อนแตก
+        const maxSize = 500;
+
+        // สีของบอลลูน
+        const colors = ["red", "green", "blue"];
+
+        // ตำแหน่งสีปัจจุบัน
+        let colorIndex = 0;
+
+
+        // เมื่อคลิกบอลลูน
+        function addSize() {
+
+            // เพิ่มขนาด 10px
+            size = size + 10;
+
+            // เปลี่ยนสี
+            colorIndex = (colorIndex + 1) % colors.length;
+
+            document.getElementById("balloon").style.backgroundColor =
+                colors[colorIndex];
+
+            // เปลี่ยนขนาด
+            document.getElementById("balloon").style.width =
+                size + "px";
+
+            document.getElementById("balloon").style.height =
+                size + "px";
+
+
+            // ถ้าถึง 500px ให้บอลลูนแตก
+            if (size >= maxSize) {
+                popBalloon();
+            }
+        }
+
+
+        // ฟังก์ชันบอลลูนแตก
+        function popBalloon() {
+
+            const balloon = document.getElementById("balloon");
+
+            // ใส่เอฟเฟกต์แตก
+            balloon.classList.add("pop");
+
+            // รอ 500ms แล้วสร้างบอลลูนใหม่
+            setTimeout(function() {
+
+                size = 200;
+                colorIndex = 0;
+
+                balloon.style.width = "200px";
+                balloon.style.height = "200px";
+                balloon.style.backgroundColor = "red";
+
+                balloon.classList.remove("pop");
+
+            }, 500);
+        }
+
+    </script>
+
+</body>
+</html>
+```
