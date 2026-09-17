@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42 Bangkok - Rush Portfolio (Peerapat)</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- แถบเมนูด้านบน -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-slate-900">
+                Portfolio
+            </a>
+
+            <nav class="flex space-x-2 text-sm font-medium">
+                <a href="index.html" class="px-3 py-1.5 rounded text-slate-600 hover:bg-slate-100">
+                    Home
+                </a>
+                <a href="thanapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                    Thanapat
+                </a>
+                <a href="peerapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                    Peerapat
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- หน้าพอร์ตคนที่ 2: พีรพัฒน์ -->
+    <main class="flex-grow bg-white">
+        
+        <!-- เมนูลัดย่อย -->
+        <nav class="bg-white py-3 px-6 border-b border-slate-200 sticky top-16 z-40 flex justify-center space-x-6 text-sm font-bold text-slate-700">
+            <a href="#p-about" class="hover:text-blue-600">About</a>
+            <a href="#p-skill" class="hover:text-blue-600">Skill</a>
+            <a href="#p-project" class="hover:text-blue-600">Project</a>
+            <a href="#p-contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+
+        <!-- Profile Banner -->
+        <header class="bg-slate-900 text-white py-12 px-4 text-center flex flex-col items-center">
+            <img src="profile01.jpg" 
+                 onerror="this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Peerapat+Profile';" 
+                 alt="Peerapat Profile" 
+                 class="w-40 h-40 object-cover rounded-xl border-4 border-white mb-4">
+            <h1 class="text-3xl font-bold mb-1">PEERAPAT SRITHAMMA</h1>
+            <p class="text-slate-300">Electrical Engineer student year 3</p>
+        </header>
+
+        <div class="max-w-3xl mx-auto px-4 py-10 space-y-10">
+            <!-- About Me -->
+            <section id="p-about" class="space-y-2 scroll-mt-28">
+                <h2 class="text-xl font-bold text-slate-900">Hi everyone. My name is Peerapat. I’m 20 years old.</h2>
+                <p class="text-slate-700">I’m a third-year Electrical Engineering student at KMITL.</p>
+                <p class="text-slate-700">I’m interested in electrical engineering and technology. In my free time, I like playing games and listening to music.</p>
+            </section>
+
+            <!-- Skill -->
+            <section id="p-skill" class="space-y-2 scroll-mt-28">
+                <h2 class="text-xl font-bold text-slate-900">Skill</h2>
+                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <li><strong>Programming:</strong> Python, C++, Java</li>
+                    <li><strong>Electrical Engineering:</strong> Circuit Design, Microcontroller Programming</li>
+                    <li><strong>Software:</strong> MATLAB, AutoCAD</li>
+                </ul>
+            </section>
+
+            <!-- Project -->
+            <section id="p-project" class="space-y-4 scroll-mt-28">
+                <h2 class="text-xl font-bold text-slate-900">Project</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
+                        <img src="pcb_project.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PCB+Circuit+Board+Project';" 
+                             alt="PCB Project"
+                             class="w-full h-40 object-cover rounded">
+                        <h3 class="font-bold text-slate-900">PCB Circuit Board Project</h3>
+                        <p class="text-sm text-slate-600">During my first year, I worked on a project involving the design and fabrication of a PCB circuit board. This project helped me develop basic skills in circuit design, PCB layout, soldering, and electronic assembly.</p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
+                        <img src="motor_project.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Three-Phase+Induction+Motor+Project';" 
+                             alt="Motor Project"
+                             class="w-full h-40 object-cover rounded">
+                        <h3 class="font-bold text-slate-900">Three-Phase Induction Motor Project</h3>
+                        <p class="text-sm text-slate-600">A second-year project focused on building and testing a three-phase induction motor, applying knowledge of electrical machines and motor operation.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="p-contact" class="space-y-1 scroll-mt-28">
+                <h2 class="text-xl font-bold text-slate-900">Contact</h2>
+                <p class="text-slate-700">Email: <a href="mailto:67010652@kmitl.ac.th" class="text-blue-600 hover:underline">67010652@kmitl.ac.th</a></p>
+                <p class="text-slate-700">GitHub: <a href="https://github.com/FWC-psritham" target="_blank" class="text-blue-600 hover:underline">FWC-psritham</a></p>
+            </section>
+        </div>
+
+        <footer class="text-center py-4 bg-slate-100 text-xs text-slate-500">
+            <p>© 2026 Peerapat Srithamma. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Footer หลัก -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-auto">
+        <p>© 2026 42 Bangkok - Piscine Discovery Rush Project</p>
+    </footer>
+
+</body>
+</html>

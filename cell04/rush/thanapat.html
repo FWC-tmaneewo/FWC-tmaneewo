@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>42 Bangkok - Rush Portfolio</title>
+    <title>42 Bangkok - Rush Portfolio (Thanapat)</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,49 +16,26 @@
     <!-- แถบเมนูด้านบน -->
     <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-            <button onclick="showView('page-landing')" class="text-xl font-bold text-slate-900">
+            <a href="index.html" class="text-xl font-bold text-slate-900">
                 Portfolio
-            </button>
+            </a>
 
             <nav class="flex space-x-2 text-sm font-medium">
-                <button onclick="showView('page-landing')" class="px-3 py-1.5 rounded text-slate-600 hover:bg-slate-100">
+                <a href="index.html" class="px-3 py-1.5 rounded text-slate-600 hover:bg-slate-100">
                     Home
-                </button>
-                <button onclick="showView('page-member1')" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                </a>
+                <a href="thanapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
                     Thanapat
-                </button>
-                <button onclick="showView('page-member2')" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                </a>
+                <a href="peerapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
                     Peerapat
-                </button>
+                </a>
             </nav>
         </div>
     </header>
 
-    <!-- หน้าหลัก (Home) --> 
-    <main id="page-landing" class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20 bg-slate-800 text-white">
-        <div class="max-w-xl space-y-6">
-            <h1 class="text-4xl font-bold">
-                Welcome to Our Rush Project
-            </h1>
-            
-            <p class="text-slate-300">
-                Select whose portfolio you want to view:
-            </p>
-
-            <div class="flex justify-center gap-4 pt-2">
-                <button onclick="showView('page-member1')" class="px-6 py-2.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
-                    Thanapat
-                </button>
-
-                <button onclick="showView('page-member2')" class="px-6 py-2.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
-                    Peerapat
-                </button>
-            </div>
-        </div>
-    </main>
-
     <!-- หน้าพอร์ตคนที่ 1: ธนภัทร -->
-    <div id="page-member1" class="hidden flex-grow bg-white">
+    <main class="flex-grow bg-white">
         
         <!-- เมนูลัดย่อย -->
         <div class="bg-slate-50 border-b border-slate-200 py-3 sticky top-16 z-40">
@@ -73,7 +50,7 @@
         <div class="max-w-3xl mx-auto px-4 py-12 space-y-12">
             
             <!-- About Section -->
-            <section id="m1-about" class="text-center space-y-4 pt-4">
+            <section id="m1-about" class="text-center space-y-4 pt-4 scroll-mt-32">
                 <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
                 
                 <img src="thanapat.jpg" 
@@ -91,7 +68,7 @@
             </section>
 
             <!-- Skills Section -->
-            <section id="m1-skills" class="text-center space-y-6 border-t border-slate-200 pt-10">
+            <section id="m1-skills" class="text-center space-y-6 border-t border-slate-200 pt-10 scroll-mt-32">
                 <h2 class="text-3xl font-bold text-slate-900">My Skills</h2>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-xl mx-auto">
@@ -129,7 +106,7 @@
             </section>
 
             <!-- Projects Section -->
-            <section id="m1-projects" class="text-center space-y-10 border-t border-slate-200 pt-10">
+            <section id="m1-projects" class="text-center space-y-10 border-t border-slate-200 pt-10 scroll-mt-32">
                 <h2 class="text-3xl font-bold text-slate-900">My Projects</h2>
 
                 <div class="space-y-10 max-w-xl mx-auto">
@@ -163,7 +140,7 @@
             </section>
 
             <!-- Contact Section -->
-            <section id="m1-contact" class="text-center space-y-4 border-t border-slate-200 pt-10">
+            <section id="m1-contact" class="text-center space-y-4 border-t border-slate-200 pt-10 scroll-mt-32">
                 <h2 class="text-3xl font-bold text-slate-900">Contact Me</h2>
                 <p class="text-slate-600 text-sm">สามารถติดต่อได้ผ่านช่องทางด้านล่าง</p>
 
@@ -181,105 +158,12 @@
             </section>
 
         </div>
-    </div>
-
-    <!-- หน้าพอร์ตคนที่ 2: พีรพัฒน์ -->
-    <div id="page-member2" class="hidden flex-grow bg-white">
-        
-        <!-- เมนูลัดย่อย -->
-        <nav class="bg-white py-3 px-6 border-b border-slate-200 sticky top-16 z-40 flex justify-center space-x-6 text-sm font-bold text-slate-700">
-            <a href="#p-about" class="hover:text-blue-600">About</a>
-            <a href="#p-skill" class="hover:text-blue-600">Skill</a>
-            <a href="#p-project" class="hover:text-blue-600">Project</a>
-            <a href="#p-contact" class="hover:text-blue-600">Contact</a>
-        </nav>
-
-        <!-- Profile Banner -->
-        <header class="bg-slate-900 text-white py-12 px-4 text-center flex flex-col items-center">
-            <img src="profile01.jpg" 
-                 onerror="this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Peerapat+Profile';" 
-                 alt="Peerapat Profile" 
-                 class="w-40 h-40 object-cover rounded-xl border-4 border-white mb-4">
-            <h1 class="text-3xl font-bold mb-1">PEERAPAT SRITHAMMA</h1>
-            <p class="text-slate-300">Electrical Engineer student year 3</p>
-        </header>
-
-        <div class="max-w-3xl mx-auto px-4 py-10 space-y-10">
-            <!-- About Me -->
-            <section id="p-about" class="space-y-2">
-                <h2 class="text-xl font-bold text-slate-900">Hi everyone. My name is Peerapat. I’m 20 years old.</h2>
-                <p class="text-slate-700">I’m a third-year Electrical Engineering student at KMITL.</p>
-                <p class="text-slate-700">I’m interested in electrical engineering and technology. In my free time, I like playing games and listening to music.</p>
-            </section>
-
-            <!-- Skill -->
-            <section id="p-skill" class="space-y-2">
-                <h2 class="text-xl font-bold text-slate-900">Skill</h2>
-                <ul class="list-disc list-inside text-slate-700 space-y-1">
-                    <li><strong>Programming:</strong> Python, C++, Java</li>
-                    <li><strong>Electrical Engineering:</strong> Circuit Design, Microcontroller Programming</li>
-                    <li><strong>Software:</strong> MATLAB, AutoCAD</li>
-                </ul>
-            </section>
-
-            <!-- Project -->
-            <section id="p-project" class="space-y-4">
-                <h2 class="text-xl font-bold text-slate-900">Project</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
-                        <img src="pcb_project.jpg" 
-                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PCB+Circuit+Board+Project';" 
-                             alt="PCB Project"
-                             class="w-full h-40 object-cover rounded">
-                        <h3 class="font-bold text-slate-900">PCB Circuit Board Project</h3>
-                        <p class="text-sm text-slate-600">During my first year, I worked on a project involving the design and fabrication of a PCB circuit board. This project helped me develop basic skills in circuit design, PCB layout, soldering, and electronic assembly.</p>
-                    </div>
-
-                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
-                        <img src="motor_project.jpg" 
-                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Three-Phase+Induction+Motor+Project';" 
-                             alt="Motor Project"
-                             class="w-full h-40 object-cover rounded">
-                        <h3 class="font-bold text-slate-900">Three-Phase Induction Motor Project</h3>
-                        <p class="text-sm text-slate-600">A second-year project focused on building and testing a three-phase induction motor, applying knowledge of electrical machines and motor operation.</p>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Contact -->
-            <section id="p-contact" class="space-y-1">
-                <h2 class="text-xl font-bold text-slate-900">Contact</h2>
-                <p class="text-slate-700">Email: 67010652@kmitl.ac.th</p>
-                <p class="text-slate-700">GitHub: FWC-psritham</p>
-            </section>
-        </div>
-
-        <footer class="text-center py-4 bg-slate-100 text-xs text-slate-500">
-            <p>© 2026 Peerapat Srithamma. All rights reserved.</p>
-        </footer>
-    </div>
+    </main>
 
     <!-- Footer หลัก -->
     <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-auto">
         <p>© 2026 42 Bangkok - Piscine Discovery Rush Project</p>
     </footer>
 
-    <!-- ฟังก์ชันสลับหน้าอย่างง่าย -->
-    <script>
-        function showView(pageId) {
-            // ซ่อนทุกหน้า
-            document.getElementById('page-landing').classList.add('hidden');
-            document.getElementById('page-member1').classList.add('hidden');
-            document.getElementById('page-member2').classList.add('hidden');
-
-            // แสดงหน้าที่เลือก
-            document.getElementById(pageId).classList.remove('hidden');
-
-            // เลื่อนไปบนสุด
-            window.scrollTo(0, 0);
-        }
-    </script>
 </body>
 </html>
