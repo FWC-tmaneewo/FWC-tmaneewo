@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42 Bangkok - Rush Portfolio Showcase</title>
+    
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col font-sans">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <button onclick="showView('page-landing')" class="text-xl font-bold text-slate-900 hover:text-amber-500 transition">
+                Portfolio
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="flex space-x-2 sm:space-x-3 text-xs sm:text-sm font-medium">
+                <button onclick="showView('page-landing')" class="px-3 py-1.5 rounded text-slate-600 hover:bg-slate-100">
+                    Home
+                </button>
+                <button onclick="showView('page-member1')" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                    Thanapat
+                </button>
+                <button onclick="showView('page-member2')" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                    Peerapat
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="page-landing" class="flex-grow flex flex-col justify-center items-center text-center px-4 py-24 bg-slate-800 text-white">
+        <div class="max-w-2xl space-y-6">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                Welcome to Our Rush Project
+            </h1>
+            
+            <p class="text-lg sm:text-xl font-medium text-slate-300">
+                Select whose portfolio you want to view:
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <button onclick="showView('page-member1')" class="px-8 py-3 rounded bg-amber-400 text-slate-900 font-bold text-lg hover:bg-amber-500">
+                    Thanapat
+                </button>
+
+                <button onclick="showView('page-member2')" class="px-8 py-3 rounded bg-amber-400 text-slate-900 font-bold text-lg hover:bg-amber-500">
+                    Peerapat
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <div id="page-member1" class="hidden flex-grow bg-white">
+        
+        <!-- Sub-navigation -->
+        <div class="bg-slate-50 border-b border-slate-200 py-3 sticky top-16 z-40">
+            <div class="max-w-4xl mx-auto px-4 flex justify-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#m1-about" class="hover:text-amber-600">About</a>
+                <a href="#m1-skills" class="hover:text-amber-600">Skills</a>
+                <a href="#m1-projects" class="hover:text-amber-600">Projects</a>
+                <a href="#m1-contact" class="hover:text-amber-600">Contact</a>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 py-12 space-y-16">
+            
+            <!-- About Section -->
+            <section id="m1-about" class="text-center space-y-6 pt-4">
+                <h2 class="text-4xl font-extrabold text-slate-900">About Me</h2>
+                
+                <img src="thanapat.jpg" 
+                     onerror="this.src='https://placehold.co/400x400/334155/ffffff?text=Thanapat+Maneewong';"
+                     alt="ธนภัทร มณีวงค์" 
+                     class="w-56 h-56 sm:w-64 sm:h-64 rounded-xl mx-auto object-cover border-4 border-amber-400 shadow-lg">
+
+                <div class="space-y-3 max-w-xl mx-auto">
+                    <h3 class="text-2xl font-bold text-slate-800">ธนภัทร มณีวงค์ (Thanapat Maneewong)</h3>
+                    <p class="text-base text-slate-600 font-medium">KMITL Electrical Engineering Student</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Passionate Electrical Engineering student at KMITL with a focus on power systems, circuit design, and AI automation workflows.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="m1-skills" class="text-center space-y-8 border-t border-slate-200 pt-16">
+                <h2 class="text-4xl font-extrabold text-slate-900">My Skills</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
+                    <div class="space-y-2">
+                        <h3 class="font-bold text-lg text-slate-900">Programming & Engineering</h3>
+                        <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                            <li>Python / C++</li>
+                            <li>MATLAB / PSIM / AutoCAD</li>
+                            <li>EDA PCB Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="font-bold text-lg text-slate-900">AI & Software Tools</h3>
+                        <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                            <li>n8n AI Workflows</li>
+                            <li>AI for Work Automation</li>
+                            <li>Google Tools & Microsoft Tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certificates Showcase -->
+                <div class="pt-6 text-left max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <img src="cert_n8n.png" 
+                                 onerror="this.src='https://placehold.co/600x420/0f172a/ffffff?text=AI+Automation+with+n8n';" 
+                                 alt="AI Automation with n8n Certificate" 
+                                 class="w-full h-auto rounded border">
+                        </div>
+
+                        <div>
+                            <img src="cert_ai.png" 
+                                 onerror="this.src='https://placehold.co/600x420/0f172a/ffffff?text=AI+for+Everyone';" 
+                                 alt="AI for Everyone Certificate" 
+                                 class="w-full h-auto rounded border">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="m1-projects" class="text-center space-y-16 border-t border-slate-200 pt-16">
+                <h2 class="text-4xl font-extrabold text-slate-900">My Projects</h2>
+
+                <div class="space-y-16 max-w-2xl mx-auto">
+                    
+                    <!-- Project 1 -->
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-3xl font-bold text-slate-900">Project 1</h3>
+                        <p class="text-lg text-slate-700">Diamond coil winding for a three-phase induction motor</p>
+                        <img src="project1.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Project+1+Image';" 
+                             alt="Diamond coil winding project" 
+                             class="w-full max-w-lg mx-auto rounded shadow">
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-3xl font-bold text-slate-900">Project 2</h3>
+                        <p class="text-lg text-slate-700">The light detector for applying car's light</p>
+                        <img src="project2.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Project+2+Image';" 
+                             alt="Light detector project" 
+                             class="w-full max-w-lg mx-auto rounded shadow">
+                        <div class="pt-1">
+                            <a href="https://youtube.com" target="_blank" class="text-red-600 hover:underline font-medium text-sm inline-flex items-center gap-1">
+                                <i class="fa-brands fa-youtube text-base"></i> รับชมวิดีโอสาธิตโครงการ
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="m1-contact" class="text-center space-y-6 border-t border-slate-200 pt-16">
+                <h2 class="text-4xl font-extrabold text-slate-900">Contact Me</h2>
+                <p class="text-slate-600 text-sm">สามารถติดต่อและดูผลงานเพิ่มเติมได้ผ่านช่องทางด้านล่าง</p>
+
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold">
+                    <a href="tel:0659038497" class="px-4 py-2 bg-slate-100 text-slate-800 rounded border border-slate-300 hover:bg-slate-200">
+                        <i class="fa-solid fa-phone mr-1 text-amber-500"></i> 0659038497
+                    </a>
+                    <a href="mailto:67010401@kmitl.ac.th" class="px-4 py-2 bg-slate-100 text-slate-800 rounded border border-slate-300 hover:bg-slate-200">
+                        <i class="fa-solid fa-envelope mr-1 text-amber-500"></i> 67010401@kmitl.ac.th
+                    </a>
+                    <a href="https://github.com/FWC-tmaneewo/FWC-tmaneewo.git" target="_blank" class="px-4 py-2 bg-slate-100 text-slate-800 rounded border border-slate-300 hover:bg-slate-200">
+                        <i class="fa-brands fa-github mr-1 text-amber-500"></i> GitHub
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div id="page-member2" class="hidden flex-grow bg-white">
+        
+        <!-- Sub-navigation -->
+        <nav class="bg-white py-3 px-6 border-b border-slate-200 sticky top-16 z-40 flex justify-center space-x-6 text-sm font-bold text-slate-700">
+            <a href="#p-about" class="hover:text-blue-600">About</a>
+            <a href="#p-skill" class="hover:text-blue-600">Skill</a>
+            <a href="#p-project" class="hover:text-blue-600">Project</a>
+            <a href="#p-contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+
+        <!-- Profile Banner -->
+        <header class="bg-neutral-900 text-white py-12 px-4 text-center flex flex-col items-center">
+            <img src="profile01.jpg" 
+                 onerror="this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Peerapat+Profile';" 
+                 alt="Peerapat Profile" 
+                 class="w-40 h-40 object-cover rounded-xl border-4 border-white mb-4">
+            <h1 class="text-3xl font-bold mb-1">PEERAPAT SRITHAMMA</h1>
+            <p class="text-slate-300">Electrical Engineer student year 3</p>
+        </header>
+
+        <div class="max-w-3xl mx-auto px-4 py-10 space-y-12">
+            <!-- About Me -->
+            <section id="p-about" class="space-y-2">
+                <h2 class="text-2xl font-bold text-slate-900">Hi everyone. My name is Peerapat. I’m 20 years old.</h2>
+                <p class="text-slate-700">I’m a third-year Electrical Engineering student at KMITL.</p>
+                <p class="text-slate-700">I’m interested in electrical engineering and technology. In my free time, I like playing games and listening to music.</p>
+            </section>
+
+            <!-- Skill -->
+            <section id="p-skill" class="space-y-3">
+                <h2 class="text-2xl font-bold text-slate-900">Skill</h2>
+                <ul class="list-disc list-inside text-slate-700 space-y-2">
+                    <li><strong>Programming:</strong> Python, C++, Java</li>
+                    <li><strong>Electrical Engineering:</strong> Circuit Design, Microcontroller Programming</li>
+                    <li><strong>Software:</strong> MATLAB, AutoCAD</li>
+                </ul>
+            </section>
+
+            <!-- Project -->
+            <section id="p-project" class="space-y-4">
+                <h2 class="text-2xl font-bold text-slate-900">Project</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <div class="border border-slate-200 rounded-lg p-4 bg-white shadow-sm space-y-2">
+                        <img src="pcb_project.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PCB+Circuit+Board+Project';" 
+                             alt="PCB Circuit Board Project"
+                             class="w-full h-44 object-cover rounded">
+                        <h3 class="font-bold text-lg text-slate-900">PCB Circuit Board Project</h3>
+                        <p class="text-sm text-slate-600">During my first year, I worked on a project involving the design and fabrication of a PCB circuit board. This project helped me develop basic skills in circuit design, PCB layout, soldering, and electronic assembly.</p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-lg p-4 bg-white shadow-sm space-y-2">
+                        <img src="motor_project.jpg" 
+                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Three-Phase+Induction+Motor+Project';" 
+                             alt="Three-Phase Induction Motor Project"
+                             class="w-full h-44 object-cover rounded">
+                        <h3 class="font-bold text-lg text-slate-900">Three-Phase Induction Motor Project</h3>
+                        <p class="text-sm text-slate-600">A second-year project focused on building and testing a three-phase induction motor, applying knowledge of electrical machines and motor operation.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="p-contact" class="space-y-2">
+                <h2 class="text-2xl font-bold text-slate-900">Contact</h2>
+                <p class="text-slate-700">Email: 67010652@kmitl.ac.th</p>
+                <p class="text-slate-700">GitHub: FWC-psritham</p>
+            </section>
+        </div>
+
+        <footer class="text-center py-6 bg-slate-100 text-xs text-slate-500">
+            <p>© 2026 Peerapat Srithamma. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-auto">
+        <p>© 2026 42 Bangkok - Piscine Discovery Rush Project</p>
+    </footer>
+
+    <script>
+        // ฟังก์ชันสลับหน้าต่าง (Single Page View Switcher)
+        function showView(pageId) {
+            // 1. ซ่อนทุกหน้าก่อน โดยใส่ class 'hidden'
+            document.getElementById('page-landing').classList.add('hidden');
+            document.getElementById('page-member1').classList.add('hidden');
+            document.getElementById('page-member2').classList.add('hidden');
+
+            // 2. แสดงเฉพาะหน้าที่ผู้ใช้กดเลือก โดยเอา class 'hidden' ออก
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            // 3. เลื่อนหน้าจอขึ้นไปบนสุด
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
