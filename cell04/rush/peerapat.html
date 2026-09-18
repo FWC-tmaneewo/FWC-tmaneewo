@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html lang="th" class="scroll-smooth">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>42 Bangkok - Rush Portfolio (Peerapat)</title>
-    
-   
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="peerapat.css">
 </head>
 
 
-<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+<body>
 
-    
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-slate-900">
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
                 Portfolio
             </a>
 
-            <nav class="flex space-x-2 text-sm font-medium">
-                <a href="index.html" class="px-3 py-1.5 rounded text-slate-600 hover:bg-slate-100">
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">
                     Home
                 </a>
-                <a href="thanapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                <a href="thanapat.html" class="nav-link nav-link-accent">
                     Thanapat
                 </a>
-                <a href="peerapat.html" class="px-3 py-1.5 rounded bg-amber-400 text-slate-900 font-bold hover:bg-amber-500">
+                <a href="peerapat.html" class="nav-link nav-link-accent">
                     Peerapat
                 </a>
             </nav>
@@ -37,38 +34,37 @@
     </header>
 
     <!--พอร์ตไอน็อต-->
-    <main class="flex-grow bg-white">
-        
+    <main class="page-main">
+
         <!--เมนูลัดใส่ทั้ง2คน-->
-        <nav class="bg-white py-3 px-6 border-b border-slate-200 sticky top-16 z-40 flex justify-center space-x-6 text-sm font-bold text-slate-700">
-            <a href="#p-about" class="hover:text-blue-600">About</a>
-            <a href="#p-skill" class="hover:text-blue-600">Skill</a>
-            <a href="#p-project" class="hover:text-blue-600">Project</a>
-            <a href="#p-contact" class="hover:text-blue-600">Contact</a>
+        <nav class="section-nav">
+            <a href="#p-about" class="section-link">About</a>
+            <a href="#p-skill" class="section-link">Skill</a>
+            <a href="#p-project" class="section-link">Project</a>
+            <a href="#p-contact" class="section-link">Contact</a>
         </nav>
 
         <!--โปรไฟล์-->
-        <header class="bg-slate-900 text-white py-12 px-4 text-center flex flex-col items-center">
-            <img src="profile01.jpg" 
-                 onerror="this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Peerapat+Profile';" 
-                 alt="Peerapat Profile" 
-                 class="w-40 h-40 object-cover rounded-xl border-4 border-white mb-4">
-            <h1 class="text-3xl font-bold mb-1">PEERAPAT SRITHAMMA</h1>
-            <p class="text-slate-300">Electrical Engineer student year 3</p>
+        <header class="profile-header">
+            <img src="profile01.jpg"
+                 alt="Peerapat Profile"
+                 class="profile-photo">
+            <h1 class="profile-name">PEERAPAT SRITHAMMA</h1>
+            <p class="profile-role">Electrical Engineer student year 3</p>
         </header>
 
-        <div class="max-w-3xl mx-auto px-4 py-10 space-y-10">
+        <div class="content">
             <!--ประวัติ-->
-            <section id="p-about" class="space-y-2 scroll-mt-28">
-                <h2 class="text-xl font-bold text-slate-900">Hi everyone. My name is Peerapat. I’m 20 years old.</h2>
-                <p class="text-slate-700">I’m a third-year Electrical Engineering student at KMITL.</p>
-                <p class="text-slate-700">I’m interested in electrical engineering and technology. In my free time, I like playing games and listening to music.</p>
+            <section id="p-about" class="section section-about">
+                <h2 class="section-title">Hi everyone. My name is Peerapat. I’m 20 years old.</h2>
+                <p class="text">I’m a third-year Electrical Engineering student at KMITL.</p>
+                <p class="text">I’m interested in electrical engineering and technology. In my free time, I like playing games and listening to music.</p>
             </section>
 
             <!--สกิวไอน็อต-->
-            <section id="p-skill" class="space-y-2 scroll-mt-28">
-                <h2 class="text-xl font-bold text-slate-900">Skill</h2>
-                <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <section id="p-skill" class="section section-skill">
+                <h2 class="section-title">Skill</h2>
+                <ul class="skill-list">
                     <li><strong>Programming:</strong> Python, C++, Java</li>
                     <li><strong>Electrical Engineering:</strong> Circuit Design, Microcontroller Programming</li>
                     <li><strong>Software:</strong> MATLAB, AutoCAD</li>
@@ -76,47 +72,45 @@
             </section>
 
             <!--ไอน็อตทำโปรเจคไรบ้าง-->
-            <section id="p-project" class="space-y-4 scroll-mt-28">
-                <h2 class="text-xl font-bold text-slate-900">Project</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
-                        <img src="pcb_project.jpg" 
-                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PCB+Circuit+Board+Project';" 
+            <section id="p-project" class="section section-project">
+                <h2 class="section-title">Project</h2>
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <img src="pcb_project.jpg"
                              alt="PCB Project"
-                             class="w-full h-40 object-cover rounded">
-                        <h3 class="font-bold text-slate-900">PCB Circuit Board Project</h3>
-                        <p class="text-sm text-slate-600">During my first year, I worked on a project involving the design and fabrication of a PCB circuit board. This project helped me develop basic skills in circuit design, PCB layout, soldering, and electronic assembly.</p>
+                             class="project-img">
+                        <h3 class="project-title">PCB Circuit Board Project</h3>
+                        <p class="project-desc">During my first year, I worked on a project involving the design and fabrication of a PCB circuit board. This project helped me develop basic skills in circuit design, PCB layout, soldering, and electronic assembly.</p>
                     </div>
 
-                    <div class="border border-slate-200 rounded p-4 bg-white space-y-2">
-                        <img src="motor_project.jpg" 
-                             onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=Three-Phase+Induction+Motor+Project';" 
+                    <div class="project-card">
+                        <img src="motor_project.jpg"
                              alt="Motor Project"
-                             class="w-full h-40 object-cover rounded">
-                        <h3 class="font-bold text-slate-900">Three-Phase Induction Motor Project</h3>
-                        <p class="text-sm text-slate-600">A second-year project focused on building and testing a three-phase induction motor, applying knowledge of electrical machines and motor operation.</p>
+                             class="project-img">
+                        <h3 class="project-title">Three-Phase Induction Motor Project</h3>
+                        <p class="project-desc">A second-year project focused on building and testing a three-phase induction motor, applying knowledge of electrical machines and motor operation.</p>
                     </div>
 
                 </div>
             </section>
-            
+
 
             <!--ติดต่อไอน็อต-->
-            <section id="p-contact" class="space-y-1 scroll-mt-28">
-                <h2 class="text-xl font-bold text-slate-900">Contact</h2>
-                <p class="text-slate-700">Email: <a href="mailto:67010652@kmitl.ac.th" class="text-blue-600 hover:underline">67010652@kmitl.ac.th</a></p>
-                <p class="text-slate-700">GitHub: <a href="https://github.com/psritham/FWC-psritham/tree/main" target="_blank" class="text-blue-600 hover:underline">FWC-psritham</a></p>
+            <section id="p-contact" class="section section-contact">
+                <h2 class="section-title">Contact</h2>
+                <p class="text">Email: <a href="mailto:67010652@kmitl.ac.th" class="link">67010652@kmitl.ac.th</a></p>
+                <p class="text">GitHub: <a href="https://github.com/psritham/FWC-psritham/tree/main" target="_blank" class="link">FWC-psritham</a></p>
             </section>
         </div>
 
-        <footer class="text-center py-4 bg-slate-100 text-xs text-slate-500">
+        <footer class="page-footer">
             <p>© 2026 Peerapat Srithamma. All rights reserved.</p>
         </footer>
     </main>
 
-    
-    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-auto">
+
+    <footer class="site-footer">
         <p>© 2026 42 Bangkok - Piscine Discovery Rush Project</p>
     </footer>
 

@@ -1,0 +1,289 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 16px;
+    min-height: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.nav-link {
+    display: block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #475569;
+}
+
+.nav-link + .nav-link {
+    margin-left: 8px;
+}
+
+.nav-link:hover {
+    background-color: #f1f5f9;
+}
+
+.nav-link-accent {
+    background-color: #fbbf24;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.nav-link-accent:hover {
+    background-color: #f59e0b;
+}
+
+.page-main {
+    flex-grow: 1;
+    background-color: #ffffff;
+}
+
+.section-nav {
+    position: sticky;
+    top: 64px;
+    z-index: 40;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    color: #334155;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.section-link {
+    display: inline;
+}
+
+.section-link + .section-link {
+    margin-left: 24px;
+}
+
+.section-link:hover {
+    color: #2563eb;
+}
+
+.profile-header {
+    padding: 48px 16px;
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.profile-name {
+    margin-bottom: 4px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.profile-role {
+    color: #cbd5e1;
+}
+
+.content {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+
+.section {
+    scroll-margin-top: 112px;
+}
+
+.section + .section {
+    margin-top: 40px;
+}
+
+.section-about > * + *,
+.section-skill > * + * {
+    margin-top: 8px;
+}
+
+.section-project > * + * {
+    margin-top: 16px;
+}
+
+.section-contact > * + * {
+    margin-top: 4px;
+}
+
+.section-title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.text {
+    color: #334155;
+}
+
+.link {
+    display: inline;
+    color: #2563eb;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.skill-list {
+    list-style: disc inside;
+    color: #334155;
+}
+
+.skill-list li + li {
+    margin-top: 4px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.project-card > * + * {
+    margin-top: 8px;
+}
+
+.project-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.project-desc {
+    color: #475569;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.page-footer {
+    padding: 16px 0;
+    background-color: #f1f5f9;
+    color: #64748b;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.site-footer {
+    margin-top: auto;
+    padding: 24px 0;
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@media (max-width: 420px) {
+    .brand {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .nav-link + .nav-link {
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 640px) {
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
